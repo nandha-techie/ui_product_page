@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans");
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+:root{
+    --grayish-blue: #B6BCC8;
+    --orange: hsl(26, 100%, 55%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);    
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+ol, ul{
+    list-style: none;
+}
+.d-flex{
+    display: flex;
+}
+.menu__bar{
+    display: none;
+}
+.mobile__menu, .close{
+    display: none;
+}
+.container{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.top__nav{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--grayish-blue);
+}
+.nav__left{
+    align-items: center;
+}
+.nav__menu li{
+    margin-left: 2rem;
+}
+.nav__menu li a{ 
+    display: inline-block;
+    padding: 40px 0.5rem;
+    color: var(--grayish-blue);
+    font-weight: 700;
+    border-bottom: 4px solid transparent;
+}
+.nav__menu li a:hover{
+    border-bottom-color: var(--orange);
+}
+.cart__icon {
+    cursor: pointer;
+}
+.profile__icon{
+    align-items: center;
+}
+.profile__icon img{
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.profile__icon img:hover{
+    border-color:  var(--orange);
+}
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 0 0 1rem;
+}
+.disktop_sneaker{
+    display: block;
+}
+.wrapper{
+    width: 21rem;
+}
+.main__sneaker{
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.main__sneaker__slide{
+    width: 400%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s ease;
+}
+.main__sneaker img{
+    height: 20rem;
+    border-radius: 1rem;
+}
+.sub__sneaker__collections{
+    justify-content: space-between;
+    width: 97%;
+    gap: 1rem;
+}
+.first-sneaker img{
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+.first-sneaker img:hover{
+    filter: brightness(1.75);
+    -webkit-filter: brightness(1.75);
+}
+.sneaker_details__header p{
+    color: var(--orange);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding-bottom: 0.5rem;
+}
+.sneaker_details__header h2{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+}
+.sneaker_details__desc p{
+    color: var(--dark-grayish-blue);
+    font-size: 0.8rem;
+    padding-top: 1rem 0 1rem;
+    line-height: 1.2rem;
+}
+.discount{
+    margin-top: 1rem;
+}
+.price {
+    justify-content: space-between;
+    align-items: center;
+    width: 9rem;
+}
+.price h3{
+    font-size: 2rem;
+    font-family: 700;
+}
+.price span{
+    background: var(--Pale-orange);
+    padding: 0.5rem;
+    color: var(--orange);
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+.discount p{
+    color: var(--grayish-blue);
+    text-decoration: line-through;
+    font-size: small;
+    font-weight: 700;
+}
+.counter__cart{ 
+    justify-content: space-between;
+    padding-top: 2rem;
+    align-items: center;
+}
+.counter{
+    background-color: var(--Light-grayish-blue);
+    width: 40%;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.5rem;
+}
+.minus strong, .plus strong{
+    color: var(--orange);
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+.counter p{
+    color: #000;
+    font-size: 1.2rem;
+}
+#addtocart{
+    width: 50%;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: var(--orange);
+    color: white;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 768px){
+    #main{
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .top__nav{
+        padding: 1rem 0.5rem;
+        width: 90%;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .nav__menu{
+        display: none
+    }
+    .close{
+        position: fixed;
+        top: 4%;
+        left: 3rem;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .close i{
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    .menu__bar{
+        display: block;
+        width: 3rem;
+    }
+    .menu__bar i{
+        font-size: 2rem;
+    }
+    .mobile__menu{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 65%;
+        background: #fff;
+        height: 100vh;
+        padding: 2rem 3rem;
+        z-index: 4;
+    }
+    .mobile__menu li{
+        margin-top: 2rem;
+    }
+    .mobile__menu__list li a{
+        color: #000;
+        line-height: 2.5rem;
+        font-size: 1.3rem;
+        font-weight: 900;
+    }
+    .open{
+        display: block;
+    }
+}
